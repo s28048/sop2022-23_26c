@@ -1,6 +1,5 @@
 
-1.	Wchodzimy na debian.org/distrib i pobieramy tam small instalation image. W zależności od architektury systemu to wybieramy 32 bądź 64 bity. Ja wybrałem 64 bity.
-Różnica pomiędzy Small a Complete installation image jest taka, że w małej system jest pobierany bez żadnych dodatkowych pakietów i trzeba wszystkie pobierać samemu. Duży zawiera już w sobie pakiety.
+1.	Wchodzimy na debian.org/distrib i pobieramy tam small instalation image. W zależności od architektury systemu to wybieramy 32 bądź 64 bity. Ja wybrałem 64 bity. Różnica pomiędzy Small a Complete installation image jest taka, że w małej system jest pobierany bez żadnych dodatkowych pakietów i trzeba wszystkie pobierać samemu. Duży zawiera już w sobie pakiety.
 2.	Wchodzimy na strone virtualbox.org/wiki/Downloads i pobieramy tam plik instalacyjny virtualboxa w zależności od tego na jakiej platformie będziemy go instalować. Po pobraniu go instalujemy.
 3. 	Włączamy virtualboxa a w nim klikamy: File -> New. Nie wybieramy opcji add bo jest to opcja do importowania już stworzonych maszyn a my takowej nie mamy i musimy ją postawić od zera.
 4.	Podajemy nazwe naszej maszyny, Ścieżke do folderu w którym zostanie utworzona nasza maszyna wirtualna, Typ maszyny oraz jej. W moim przypadku nazwa to po prostu Debian_sop, typ Linux a versja Debian 64 bit. Klikamy next
