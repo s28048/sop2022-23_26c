@@ -1,7 +1,7 @@
 2023-03-04
 Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
 Jak zainstalować Linuxa Debiana na Virtual Boxie. Wszystko było dość jasne, chociaż temat na pewno można by było zgłębić,
-jak każdy inny :). Nie jest to natomiast w obszarze moich potrzeb/zainteresowań. Jedyne co mnie trochę zaskoczyło 
+jak każdy inny :). Chętnie dowiedziałabym się o alternatywach Virtual Boxa. Jedyne co mnie trochę zaskoczyło 
 (chociaż to zbyt silnie powiedziane), to inne opcje w Virtual Boxie niż te pokazane na zajęciach, oraz jedna różnica przy instalacji Debiana
 (nie miałam kilku opcji przy partycjonowaniu dysku, które były pokazane na zajęciach). 
 Ogólnie zajęcia fajne, proces instalacji przyjemny, chociaż opisywanie procesu instalacji dość nudne i mozolne. Moim zdaniem trochę nadmiarowe 
