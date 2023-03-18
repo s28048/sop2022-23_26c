@@ -2,4 +2,4 @@
 Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 
 - używać Githuba
-- 
+- Żaden szanujący się administrator Linuxa nie używa systemu graficznego
