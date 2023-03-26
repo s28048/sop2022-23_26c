@@ -188,7 +188,7 @@ Instalator uruchomił teraz "tasksel", który pozwala wybrać komponenty systemu
 
 ## Instalacja Bootloadera
 
-Po dłuższej chwili pojawia się okno z pytaniem, czy zainstalować GRUBa. Aby system mógł wystartować, potrzebuję jakiegoś bootloadera, więc wybieram "Yes". Wybieram partycję /dev/sda, ponieważ to moja partycja systemowa i jako jedyna ma ustawioną flagę "bootable".
+Po dłuższej chwili pojawia się okno z pytaniem, czy zainstalować GRUBa. Aby system mógł wystartować, potrzebuję jakiegoś bootloadera, więc wybieram "Yes". Wybieram partycję /dev/sda1, ponieważ to moja partycja systemowa i jako jedyna ma ustawioną flagę "bootable".
 
 ## Finalizacja
 
