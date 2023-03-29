@@ -1,0 +1,16 @@
+#!/bin/bash
+
+X="Tekst dłuższy"
+echo $X
+
+# Jaka jest różnica między " a ' ?
+
+# w cudzysłowach zmienne są zamieniane na wartości
+# w cudzysłowach możemy umieścić więcej niż jedno słowo lub znak oddzielony spacją
+
+# w apostrofach nazwy zmiennych są drukowane jako znaki takie jakie są w kodzie
+# 
+
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
+
