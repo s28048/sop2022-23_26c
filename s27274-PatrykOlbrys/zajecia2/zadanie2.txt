@@ -1,5 +1,15 @@
 #!/bin/bash
 
+X=tekst
+echo $X
+bash
+echo $X
+
+# Tutaj na górze pierwszy raz zmienna $X
+# wyświetla się prawidłowo, natomiast drugi raz
+# nie może się ona wyświetlić ponieważ
+# wywołaliśmy drugą powłokę, która nie wie co przechowuje $X
+
 X="Tekst dłuższy"
 echo $X
 
