@@ -167,7 +167,7 @@ Udostępnianie folderów:
 Opcja do dzielenia katalogów do dzielenia się plikami z członkami sieci. Automatyczne montowanie sprawia, że goszczone systemy automatycznie będa próbowały go zamontować przy starcie. Tylko do odczytu ogranicza dostep do katalogu.
 
 3. Instalacja
-Maszyne można włączyć bez interfejscu graficznego, choć początkowo okno instalacji mszyny się pojawi (osobny start), a bezgłowy start nie wyświtli całkowicie nic.
+Maszyne można włączyć bez interfejscu graficznego, choć początkowo okno instalacji maszyny się pojawi (osobny start), a bezgłowy start nie wyświtli całkowicie nic.
 
 Przyciskiem F12 sprawdzam kolejnośc bootowania, literą C przechodzę do GRUBa, boot loader odpowiadającego za kolejność włączania systemów na dyskach operacyjnych. 
 Instalacji graficznej uzywamy kiedy mamy zasoby i dużo czasu, zaś instalacja zwykła jest szybsza i znajduje lepsze rozwiązanie w połączeniach szeregowych oraz sieciowych.
@@ -222,7 +222,7 @@ Przestrzeń wymiany powinna mieć 1,5 do 2 razy ilości RAMu, dlatego tworzę pa
 
 Systemy plików:
 "Ext4: większe limity rozmiaru, obsługa extents, prealokacja, opóźniona alokacja, kompatybilność wsteczna, zwiększona liczba obsługiwanych podfolderów
-Ext3: system księgowania (dokładny zapis zmian na dysku), brak możliwości odzyskania skasowanych plików w odróżnieniu od ext 2
+Ext3: system księgowania (dokładny zapis zmian na dysku), brak możliwości odzyskania skasowanych plików w odróżnieniu od ext2
 Ext2: posiadał systemy zapobiegania defragmentacji dysku, rozpoznawania uszkodzeń oraz wolne pola w strukturach danych
 btrfs: możliwość zmiany rozmiaru partycji online, Dodawanie/usuwanie urządzeń blokowych w locie, RAID na poziomie obiektów – możliwość stworzenia odpowiednika RAID1 oraz RAID0, migawki, metadane, kompresja w locie, defragmentacja online, aresacja do 16 eksabajtów
 JFS(Journaled File System): extents, księgowanie, B+ drzewa, 32PB rozmiaru partycji
