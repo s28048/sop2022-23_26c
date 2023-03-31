@@ -1,0 +1,8 @@
+ZADANIE 2
+
+1.Skrypt: 
+#!bin/bash
+X=tekst
+echo $X
+bash
+echo $X

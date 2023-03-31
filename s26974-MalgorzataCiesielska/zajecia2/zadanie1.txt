@@ -1,0 +1,11 @@
+ZADANIE 1
+
+1. Skrypt:
+#!bin/bash
+echo "Witamy w terminalu"
+
+2. Wynik:
+"Witamy w terminalu" wyświetlone w konsoli
+
+3. Interpretacja:
+Wykonało się polecenie echo
