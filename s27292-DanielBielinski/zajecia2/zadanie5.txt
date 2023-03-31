@@ -33,10 +33,14 @@ Czy jest to możliwe w czystym bash-u?
 
 Rozwiązanie:
 
-
-
-
-
+#!/bin/bash
+argument1=$1
+text="ma kota, a kot ma"
+if [[ ${argument1:(-1)} =~ [aeiouąęóy] ]]; then
+ echo "$argument1 $text ${argument1}ę"
+else
+  echo "$name $text $(echo "$argument1" | sed 's/[a-z]+$/a/')"
+fi
 
 
 Polecenie b: 
