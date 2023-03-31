@@ -1,4 +1,4 @@
-Polecenie a:
+Polecenie a1:
 
 A=Ala
 
@@ -11,6 +11,33 @@ Rozwiązanie:
 echo $A ma kota, a kot ma ${A:0:2}ę
 
 Używamy do tego operacji na ciągach znaków. W nawiasach {} na początku podajemy zmienną, po pierwszym dwukropku index od którego zacznie się zmienna a po drugim dwukropku ilość znaków do wyświetlenia czyli wyjdzie nam z tego: Al
+
+
+Polecenie a2:
+
+Napisz skrypt, który będzie wypisywał taki tekst także dla imion męskich. Pomijamy zdrobnienia i imiona które się dziwnie odmieniają (na przykład Marek). Niech skrypt ten przyjmuje jeden argument - imię. Przykładowe wywołanie:
+
+$ ./pszetżkole Ala
+
+Ala ma kota, a kot ma Alę
+
+$ ./pszetżkole Justyna
+
+Justyna ma kota, a kot ma Justynę
+
+$ ./pszetżkole Stefan
+
+Stefan ma kota, a kot ma Stefana
+
+Czy jest to możliwe w czystym bash-u?
+
+Rozwiązanie:
+
+
+
+
+
+
 
 Polecenie b: 
 
