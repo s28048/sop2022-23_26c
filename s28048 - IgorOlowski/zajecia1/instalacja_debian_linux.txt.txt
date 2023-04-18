@@ -36,7 +36,7 @@ W wypadku instalacji przez ISO - wybranie nazwy systemu nie jest możliwe
 Przy tym sposobie instalacji mozlwie jest uzycie trybu Unattended Guest OS, ktory pozwala pobrac system automatycznie,w tym wypadku trzeba bedzie od razu podac dane uzytkownika/administratora oraz dodatkowe informacje do systemu takie jak w przypadku WIndowsa, klucz produktu i host name oraz nazwe domeny, dodatkowa opcja pozwala instalowac system w tle.
 
 Przechodzimy dalej do wyboru ilosci pamieci 
-W przypadku instalacji systemu bez wersji desktop, nalezy przypisac wedle producenta min 256 mb RAM, zalecena 512 mb, a na dysku twardym poswiecic 2 Gb. Z racji prostej instalacji uzyjemy opcji bez desktopu, jednak w przypadku chęci jego posiadania konieczne bedzie uzycie min 1 gb, zalecane 2 gb RAM oraz 10 gb na dysku twardym. W celu usprawnienia instalacji osobiscie uzyje dwukrortnosci zalecanej pamieci operacyjnej i pamieci na dysku twardym.
+W przypadku instalacji systemu bez wersji desktop, nalezy przypisac wedle producenta min 128 mb RAM, zalecena 512 mb, a na dysku twardym poswiecic 2 Gb. Z racji prostej instalacji uzyjemy opcji bez desktopu, jednak w przypadku chęci jego posiadania konieczne bedzie uzycie min 1 gb, zalecane 2 gb RAM oraz 10 gb na dysku twardym. W celu usprawnienia instalacji osobiscie uzyje dwukrortnosci zalecanej pamieci operacyjnej i pamieci na dysku twardym.
 Kolejno jest opcja ustawienia liczby wirtualnych procesorow do uzycia, min 1 ale producent zaleca by nie uzywac wiecej niz polowy ilosci watkow procesora na wlasnym komputerze, ja uzyje 2, przy 8 wątkach na kompueterze .
 Opcja Enable EFI (umożliwia bootowanie EFI) dotyczy wyboru typu rozruchu systemu operacyjnego  wirtualnego przy systemach bardziej zaawansowanych niż Debian (np. Windows)
 Nastepnie tworzymy wirtualny dysk pamieci twardej, dobieramy pojemnosć, podobnie jak poprzednio wybieramy pojemnosc dwukrotnie wieksza niz zalecana (czyli 4gb) dla latwiejszego dzialania systemu. Jest mozliwe użycie calej przestrzeni posiadanego dysku przy uzyciu funckji Pre-allocate full size. Mozliwe jest też dobranie wczesniej stworzonego wirtualnego dysku, lub nie dodawanie zadnego dysku wirtualnego, gdzie możemy później dodać dysk twardy o odpowiedniej pojemności i dostosować go do naszych potrzeb. Opcja ta może być przydatna, gdy chcemy utworzyć pusty system i zainstalować na nim system operacyjny z zewnętrznego źródła, na przykład z wirtualnego napędu CD/DVD lub obrazu ISO.
@@ -103,7 +103,7 @@ Storage
 - Controller: IDE - standard komunikacji z dyskiem optycznym 
 	- wybór dysku optycznego, spośród primary i secondary, primary słóża do bootowania, drugie do pozostałych czynności, wybieramy secondary.	
 	Na dysk jest możliwośc wgrania systemu w pliku ISO, w naszym przypadku wykonamy to pozniej.
-	Opcja libe cd/dvd pozwala na odpalenie systemu bez instalowania go na dysku, nie używamy, gdyż w tej opcji nie możliwe jest zapisanie danych po restracie systemu
+	Opcja live cd/dvd pozwala na odpalenie systemu bez instalowania go na dysku, nie używamy, gdyż w tej opcji nie możliwe jest zapisanie danych po restracie systemu
 - Controller SATA - standard komunikacj z dyskami twardym, zmiany jego nazwy, zmianaa standard komunikacji, wybieramy najpoularniejszy AHCI,
 	- Dysk. vdi - istnieje tu możliwośc wyboru portu podłączenia dysku, ustalenia czy jest HDD oraz czy jest Hot-pluggable, czyli czy można go odłączać w czasie działania systemu. Nasz dysk uznajemy za nie SSD, a z racji instalacji systemu, nie dajemy mu opcji odłączania. Podłaczony zostaje do wejścia 0, bez znaczenia numer od 1 do 30.
 		Opcja Hosit I/O Cache na użycie pamięci cache dysku hosta do przyspieszenia operacji wejścia-wyjścia na dysku wirtualnym.
@@ -191,14 +191,14 @@ Opcja manual (Ją wybieramy jako  szanujący się administratorzy Linuxa )
 	- Nasz dysk, który wcześniej stworzylismy (tą opcje wybieramy do dalszej konfiguracji)
 
 Potwierdzamy partycjonowanie dysku
- Wybieramy pustą partycji
+ Wybieramy pustą partycje
  	- Create a new partition (Ręczny podział pamięci, ją wybieramy jako  szanujący się administratorzy Linuxa )
 	- Automatically partition the free space (Automatyczny podział partycji)
 	- Show Cylinder/head/sector/information (Pokazuje obecny podział dysku)
 	Wybieramy nowy rozmiar partycji w gb lub procentach
 	 Ja wybieram na 2 GB na system operacyjny
 	Wybór rodzaju partycji:
-	- Primary (partycje primary są partycjami pierwszego poziomu i są używane jako podstawowe partycje startowe, na których można instalować systemy operacyjne. Maksymalnie na dysku można utworzyć cztery partycje primary lub trzy partycje primary i  partycje logical)
+	- Primary (partycje primary są partycjami pierwszego poziomu i są używane jako podstawowe partycje startowe, na których można instalować systemy operacyjne. Maksymalnie na dysku możemy utworzyć maksymalnie cztery partycje podstawowe lub trzy partycje podstawowe i jedną partycję rozszerzoną (extended), która może zawierać wiele partycji logicznych.)
 	- Logical (partycje drugiego poziomu, które służą do tworzenia dodatkowych partycji na dysku, ponieważ partycje primary już zostały wykorzystane)
 
 	Położenie
@@ -236,15 +236,15 @@ Physical volume for RAID - fizyczny wolumin używany w macierzach RAID do łącz
 
 Physical volume for LVM - fizyczny wolumin używany w systemie LVM (Logical Volume Manager) do zarządzania przestrzenią dyskową.
 
-Bootable flag to flaga partycji na dysku twardym, która wskazuje, czy dana partycja jest bootowalna. Oznaczenie partycji jako bootowalnej jest ważne w przypadku, gdy na dysku twardym jest zainstalowany system operacyjny, który musi zostać uruchomiony podczas rozruchu komputera. Bootable flag może być ustawiona tylko dla partycji typu Primary lub Logical, ale nie dla partycji typu 
+Bootable flag to flaga partycji na dysku twardym, która wskazuje, czy dana partycja jest bootowalna. Oznaczenie partycji jako bootowalnej jest ważne w przypadku, gdy na dysku twardym jest zainstalowany system operacyjny, który musi zostać uruchomiony podczas rozruchu komputera . Bootable flag może być ustalona na partycjach lub nośnikach, które zawierają system operacyjny lub bootloader.
 
 
 Tworzenie partycji swap
 
 Wybieramy pustą partycji
 Okreslamy jej pamiec na 1 GB, logical (nie bedzie ona służyła do obsługi systemu)
-Begging (co by był szybki dostep)
-Syste plików - swap - zgodnie z przeznaczeniem
+Beginning (co by był szybki dostep)
+System plików - swap - zgodnie z przeznaczeniem
 Bootable flag - off - nie służy do instalacji systemu
 
 Inne ustawienia na tym etapie
@@ -271,7 +271,7 @@ Dane do użycia Proxy, jeśli nie używamy tak jak w naszym przypadku to nie dod
 Zgoda na udział w rankingu pakietów, autorzy oceniają za pomoca tego przydatność konkretnych ich pakietów, w celu doboru ich przy instalacji "małej płyty", z racji testów, odrzucamy.
 
 Wybór oprogramowania
-- Debian desktop environemnt - wybieramy system bez grafiki - gdyż żaden szanujący się administrator Linuxa nie używa systemu graficznego
+- Debian desktop environemnt - wybieramy system bez grafiki z racji przyjetych na wstepie zalozen
 - Standard system utilities - Standardowe narzędzia systemowe to zestaw programów, które są dostarczane z systemem operacyjnym i służą do zarządzania i konfiguracji systemu. Są to między innymi: terminal, menadżer pakietów, menadżer plików, narzędzia sieciowe, menedżer urządzeń, edytor tekstowy, narzędzia diagnostyczne, konsola ratunkowa, narzędzia do zarządzania systemem oraz narzędzia do monitorowania systemu.
 Kolejne systemy graficzne, których nie użyjemy:
 - GNOME to środowisko graficzne dla systemów Linux i innych zgodnych z Unix, zaprojektowane dla prostej i łatwej obsługi. Interfejs użytkownika GNOME składa się z panelu górnego i dolnego oraz menu głównego, a aplikacje można uruchamiać za pomocą docka.
